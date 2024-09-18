@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+      form {
+        border-radius: 100px;
+        background-color: rgb(232, 234, 239);
+        margin: 10px;
+        padding: 10px;
+      }
+      .form-group {
+        margin: 0;
+        padding: 10px;
+        border-radius: 8px;
+        width: 100%;
+      }
+      .form-group-left {
+        width: 49%;
+        float: left;
+        padding: 10px;
+      }
+      .form-group-right {
+        width: 49%;
+        float: right;
+        padding: 10px;
+      }
+      label {
+        font-weight: bold;
+        display: table;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="file"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 8px;
+        border-radius: 8px;
+      }
+      input[type="file"] {
+        padding: 5px;
+      }
+      .idsss {
+        align-items: center;
+        align-self: center;
+        margin-top: 20px;
+        margin-left: 50px;
+        background-color: #4caf50;
+        color: rgb(9, 0, 0);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        width: 300px;
+        display: flex;
+        color: white;
+      }
+      .submit-button {
+        display: flex;
+        width: 90%;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      @media only screen and (max-width: 768px) {
+        .form-group-left,
+        .form-group-right {
+          width: 100%;
+          float: none;
+          padding: 10px;
+        }
+        .idsss {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+      .p {
+        font-size: 18px;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      }
+    </style>
+    <script>
+      function Submit() {
+        alert("hello");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-md bg-light fs-5 position-fixed">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="navbar-items ms-4 charityName">
+            Amoksh<span class="text-danger">.org</span>
+          </li>
+        </ul>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="collapsibleNavbar"
+        >
+          <ul class="navbar-nav">
+            <li class="navbar-items me-4 navbarTabs">
+              <a class="text-decoration-none active" href="./Home.html">Home</a>
+            </li>
+            <li class="navbar-items me-4 navbarTabs">
+              <a class="text-decoration-none" href="./gallery.html">Gallery </a>
+            </li>
+            <li class="navbar-items me-4 navbarTabs">
+              <a class="text-decoration-none" href="./about.html">About</a>
+            </li>
+            <li class="navbar-items me-4 navbarTabs">
+              <a class="text-decoration-none" href="./career.html">Career</a>
+            </li>
+            <li class="navbar-items me-5 navbarTabs">
+              <a class="text-decoration-none" href="./contact.html">Contact</a>
+            </li>
+            <li class="navbar-links me-4 navbarTabs">
+              <a
+                class="text-decoration-none text-light rounded-pill btn donateBtn"
+                href=""
+                >Donate Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header image and text -->
+    <div class="container-fluid mt-5 mb-5">
+      <div class="d-flex text-center mt-5 headerImageblog" style="height: 50vh">
+        <h2
+          class="h1 text-white"
+          style="
+            font-size: 100px;
+            filter: drop-shadow(2px 4px 6px black);
+            margin-left: 110px;
+          "
+        >
+          Career
+        </h2>
+      </div>
+    </div>
+
+    <!-- blogs Section -->
+
+    <div class="container blogsContainer">
+      <div style="margin: 50px; padding: 30px">
+        <h1>Volunteers Opportunities</h1>
+        <p class="p">
+          Volunteering with DCT allows individuals to actively contribute to the
+          mission of improving access to health services and quality education.
+          Volunteers are the backbone of our initiatives, and we offer various
+          opportunities to engage: Healthcare Outreach: Volunteers can
+          participate in community health drives, assist medical professionals,
+          and help with health education programs in underprivileged areas.
+          Educational Support: Volunteers can help with tutoring students,
+          assisting teachers in classrooms, organizing educational workshops,
+          and distributing learning materials. Event Coordination: Help us
+          organize and manage events, fundraising campaigns, or awareness
+          programs. Volunteers can assist with planning, logistics, and
+          outreach. Community Engagement: Work directly with communities to
+          raise awareness about health and education, gather feedback, and
+          support local initiatives aimed at improving living standards.
+        </p>
+        <h3>Associates</h3>
+        <p class="p">
+          For those seeking a deeper, long-term involvement, joining DCT as an
+          associate provides the opportunity to work more closely on strategic
+          projects and organizational growth: Project Managers: Lead projects
+          focused on health or education, ensuring successful implementation,
+          overseeing budgets, and coordinating with local partners and
+          stakeholders. Fundraising Associates: Develop fundraising strategies,
+          create grant proposals, and work with donors to secure funding for
+          DCT’s programs. Health and Education Specialists: Professionals in the
+          fields of healthcare or education can contribute their expertise to
+          guide program development, create training modules, and improve
+          service delivery in communities. Administrative and Technical Roles:
+          Join the team to provide essential administrative support or technical
+          skills in areas like IT, finance, and HR, ensuring the smooth
+          functioning of the organization.
+        </p>
+        <h3>Why Get Involved?</h3>
+        <p class="p">
+          Make a Real Impact: Every role, whether volunteer or associate,
+          contributes directly to improving lives through health and education
+          initiatives. Develop New Skills: Volunteering and working with DCT
+          provide opportunities to gain valuable experience, learn new skills,
+          and grow both personally and professionally. Be Part of a Passionate
+          Community: Join like-minded individuals who are committed to the cause
+          and build lifelong connections while giving back.
+        </p>
+        <h1>Program Associates</h1>
+        <p class="p">
+          DCT offers various professional and long-term opportunities for
+          individuals who want to make a lasting impact in the fields of health
+          and education. As a Program Associate, you will play a key role in
+          driving our initiatives forward, contributing your skills, expertise,
+          and passion to create meaningful change
+        </p>
+        <h3>Why Join DCT as a Program Associate</h3>
+        <p class="p">
+          Professional Growth: DCT provides a supportive environment for
+          personal and professional development, offering mentorship and
+          learning opportunities. Meaningful Work: You will contribute to
+          life-changing programs that improve health and education for
+          underserved communities, making a direct, positive impact on people’s
+          lives. Collaborative Environment: Work with a passionate, dedicated
+          team of professionals and volunteers who are committed to our cause.
+          Long-Term Opportunities: Many Program Associates start in one role and
+          grow into leadership positions, expanding their responsibilities and
+          contributions to the organization.
+        </p>
+        <h3>Who We Are Looking For</h3>
+        <p class="p">
+          Passionate about making a difference in health and education. Skilled
+          in their respective fields with relevant qualifications and
+          experience. Dedicated to long-term involvement with a willingness to
+          work in diverse and sometimes challenging environments. Collaborative
+          and capable of working in a team, but also proactive and independent
+          when needed.
+        </p>
+        <h3>How to Apply</h3>
+        <p class="p">
+          If you are interested in joining DCT as a Program Associate, please
+          submit your resume and a cover letter outlining your experience and
+          why you are passionate about working with DCT. Send your application
+          to careers@DCT.org. Make sure to specify the role you are applying for
+          in the subject line of your email. Applications will be reviewed on a
+          rolling basis, and only shortlisted candidates will be contacted.
+        </p>
+        <h3>Contact Information</h3>
+        <p class="p">
+          If you have any questions about the available roles or the application
+          process, feel free to reach out to our HR Team at careers@DCT.org or
+          call us at [Phone Number]. By joining DCT as a Program Associate, you
+          will be contributing your expertise to an organization dedicated to
+          transforming lives through health and education initiatives. We look
+          forward to welcoming passionate individuals who are ready to make a
+          lasting impact.
+        </p>
+      </div>
+      <!-- -------------Registration------------ -->
+
+      <div class="form-group">
+        <form action="" method="post" enctype="">
+          <div>
+            <h1
+              style="
+                margin-top: 50px;
+                text-align: center;
+                height: auto;
+                padding: 10px;
+              "
+            >
+              Apply for Join
+            </h1>
+            <div class="form-group-left">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required />
+
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select Gender...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+
+              <label for="mobile">Mobile Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                pattern="[0-9]{10}"
+                required
+              />
+            </div>
+
+            <div class="form-group-right">
+              <label for="alternate_mobile">Alternate Mobile Number</label>
+              <input
+                type="tel"
+                id="alternate_mobile"
+                name="alternate_mobile"
+                pattern="[0-9]{10}"
+              />
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="cv">C V</label>
+              <input
+                type="file"
+                id="cv"
+                name="cv"
+                accept=".pdf,.jpg,.png"
+                required
+              />
+              <label for="photo">Passport-size Photo Upload</label>
+              <input
+                type="file"
+                id="photo"
+                name="photo"
+                accept=".jpg,.png"
+                required
+              />
+            </div>
+
+            <div class="submit-button">
+              <input
+                type="submit"
+                value="Apply"
+                class="idsss"
+                onclick="Submit()"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- fixed blog when clicked -->
+    <div class="container-fluid fixedBlog">
+      <div>
+        <i style="float: inline-end"
+          ><span
+            class="material-symbols-outlined closebtn"
+            style="font-size: 66px; z-index: 2001"
+          >
+            close
+          </span></i
+        >
+      </div>
+      <div class="container-fluid d-flex" style="justify-content: center">
+        <!-- <div class="card fixedCard mb-5">
+          <img src="./images/blog2.jpg" alt="" class="img-fluid" width="100%" />
+          <div class="card-body">
+            <div class="card-title"><h1>Children In Gaza</h1></div>
+            <p>
+              Children in Gaza face unique challenges due to the ongoing
+              political and humanitarian situation in the region. Living in one
+              of the most densely populated areas in the world, Gaza's children
+              endure a reality shaped by conflict, economic hardship, and
+              limited access to basic necessities. <br />
+              One of the most significant impacts on children in Gaza is the
+              cycle of violence and conflict that has persisted for decades.
+              Many children grow up witnessing or directly experiencing the
+              horrors of war, including bombings, gunfire, and loss of loved
+              ones. These traumatic experiences can have long-lasting
+              psychological effects, leading to anxiety, depression, and
+              post-traumatic stress disorder (PTSD). The constant fear and
+              instability make it difficult for children to feel safe and
+              secure, hindering their emotional well-being and development.
+              Access to education is another major concern for children in Gaza.
+              The education system suffers from overcrowded classrooms,
+              inadequate facilities, and a shortage of qualified teachers.
+              Frequent disruptions caused by conflict further impede learning
+              opportunities, with schools often forced to close or relocate due
+              to safety concerns. <br />
+              <span style="color: tomato">
+                As a result, many children struggle to receive a quality
+                education, limiting their future prospects and perpetuating the
+                cycle of poverty.</span
+              >
+
+              Children bear the brunt of these hardships, facing malnutrition,
+              illness, and limited access to essential healthcare services. The
+              lack of proper nutrition and healthcare undermines their physical
+              development and overall health, putting them at risk of lifelong
+              health issues. Despite these challenges, children in Gaza
+              demonstrate remarkable resilience and strength in the face of
+              adversity. <br />
+              <span style="color: tomato">
+                Many find solace and support within their families and
+                communities, relying on each other to cope with the hardships
+                they endure.</span
+              >
+              Organizations and NGOs also play a crucial role in providing aid
+              and assistance to vulnerable children, offering psychosocial
+              support, educational programs, and access to basic necessities.
+              Efforts to improve the situation for children in Gaza must
+              prioritize their safety, well-being, and right to a dignified
+              childhood. This requires a concerted effort from the international
+              community to address the root causes of the conflict, alleviate
+              humanitarian suffering, and promote peace and stability in the
+              region. By investing in education, healthcare, and social support
+              systems, we can help empower the children of Gaza to build a
+              brighter future for themselves and their community. <br />
+              <b>
+                The economic blockade imposed on Gaza exacerbates the
+                humanitarian crisis, with severe shortages of food, clean water,
+                and medical supplies.</b
+              >
+              Certainly, let's delve deeper into some specific aspects of the
+              challenges faced by children in Gaza. <br />
+              <br />
+              1. <b style="color: green">**Trauma and Mental Health**:</b>
+              The psychological impact of living in a conflict zone cannot be
+              overstated. Children in Gaza often experience symptoms of trauma
+              such as nightmares, bed-wetting, and behavioral issues. The lack
+              of access to mental health services exacerbates these problems,
+              leaving many children without the support they need to cope with
+              their emotions. Addressing the mental health needs of children in
+              Gaza is crucial for their overall well-being and future
+              resilience.
+              <br /><br />2.<b style="color: green"
+                >**Childhood Interrupted**:</b
+              >
+              Childhood in Gaza is marked by experiences that no child should
+              have to endure. Many children are forced to grow up quickly,
+              assuming responsibilities beyond their years due to the loss of
+              parents or older siblings, or the need to contribute to the
+              family's income. This premature transition to adulthood robs
+              children of their innocence and deprives them of essential
+              experiences of play, learning, and socialization. <br /><br />
+              3.<b style="color: green"> **Limited Opportunities**:</b> The
+              blockade and restricted movement severely limit opportunities for
+              children in Gaza. Higher education, job prospects, and exposure to
+              different cultures are often out of reach for many due to the
+              economic and political constraints. This lack of opportunities
+              perpetuates a sense of hopelessness and disillusionment among
+              Gaza's youth, fueling feelings of frustration and resentment.
+              <br /><br />
+              4.<b style="color: green">**Healthcare Challenges**:</b> Access to
+              healthcare in Gaza is constrained by limited resources and
+              infrastructure, exacerbated by the blockade. Children with chronic
+              illnesses or disabilities face significant barriers to receiving
+              adequate care and support. The shortage of medical supplies and
+              specialized treatment facilities further compounds the challenges
+              faced by children with complex health needs. <br /><br />
+              5.
+              <b style="color: green">**Impact of Displacement**:</b> Gaza's
+              children are no strangers to displacement, with many experiencing
+              multiple episodes of forced evacuation due to conflict or the
+              threat of demolition. Displacement disrupts their education,
+              social networks, and sense of stability, leaving them vulnerable
+              to exploitation and abuse. The lack of durable solutions for
+              displaced families perpetuates a cycle of instability and
+              uncertainty for children in Gaza. Despite these challenges, there
+              is hope for the children of Gaza. Investing in education,
+              healthcare, and psychosocial support services can make a tangible
+              difference in their lives, helping them heal from trauma, pursue
+              their dreams, and contribute positively to their communities. By
+              prioritizing the needs of Gaza's children and investing in their
+              future, we can help break the cycle of conflict and build a more
+              peaceful and prosperous society for generations to come.
+            </p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- Pagination -->
+    <!-- <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link text-danger" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-danger" href="#">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-danger" href="#">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-danger" href="#">3</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link text-danger" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav> -->
+
+    <!-- footer -->
+    <footer>
+      <div class="container-fluid" style="background-color: #fcf8f9">
+        <div class="container footerContainer">
+          <div class="row">
+            <div class="col-lg-4 mb-5 p-5">
+              <h1 class="text-center">
+                <a
+                  href="./Home.html"
+                  style="color: black; text-decoration: none; cursor: pointer"
+                  >Amoksh<span class="text-success">.org</span></a
+                >
+              </h1>
+              <br />
+              <p style="font-size: 23px">
+                At HelpingHands, we are driven by a profound commitment to
+                making a meaningful difference in the lives of those we serve.
+                Our mission is clear: to Help other who are in need. Guided by
+                our core values of compassion, integrity, and inclusivity, we
+                have been steadfastly dedicated to this cause since our
+                inception 2019.
+              </p>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-3">
+                    <i class="fa-brands fa-instagram"></i>
+                  </div>
+                  <div class="col-3">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </div>
+                  <div class="col-3"><i class="fa-brands fa-linkedin"></i></div>
+                  <div class="col-3"><i class="fa-brands fa-youtube"></i></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 p-5" style="font-size: 23px">
+              <h1 class="text-center">Services</h1>
+              <ul>
+                <li class="list-group-item">
+                  <a class="services" style="text-decoration: none" href=""
+                    >Food and Water</a
+                  >
+                  <hr />
+                </li>
+                <li class="list-group-item">
+                  <a class="services" style="text-decoration: none" href=""
+                    >Eduaction</a
+                  >
+                </li>
+                <hr />
+                <li class="list-group-item">
+                  <a class="services" style="text-decoration: none" href=""
+                    >Health and Medicine</a
+                  >
+                </li>
+                <hr />
+                <li class="list-group-item">
+                  <a class="services" style="text-decoration: none" href=""
+                    >Shelter</a
+                  >
+                </li>
+                <hr />
+              </ul>
+            </div>
+            <div class="col-lg-4 text-center p-5">
+              <h1>Subscribe Newsletter</h1>
+              <br />
+              <h4>
+                Subscribe our newsletter to get updates about our services and
+                offers.
+              </h4>
+              <br />
+              <div class="container">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your Email"
+                  class="form-control rounded-pill text-center"
+                  style="height: 74px; font-size: 30px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/blog.js"></script>
+  </body>
+</html>
